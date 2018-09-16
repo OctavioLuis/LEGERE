@@ -15,7 +15,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">  
             <li><a href="${urlRoot}alumno/reportes">Reportes</a></li>
-            <li><a href="${urlRoot}docenviado/lista">Perfil</a></li>             
+            <li><a href="${urlRoot}alumno/perfil">Perfil</a></li>             
             <li><a href="${urlRoot}alumno/bibioteca">Biblioteca</a></li>
             <li><a href="${urlRoot}dependencia/lista">Agenda</a></li>            
           </ul>

@@ -13,11 +13,7 @@
 
 <spring:url value="/resources" var="urlPublic"></spring:url>
 <spring:url value="/" var="urlRoot"></spring:url>
-<spring:url value="/pdf/lista" var="urlDocPdf" />
-<spring:url value="/docenviado/lista" var="urlDocEnviado" />
-<spring:url value="/usuario/edit" var="urlDocComp" />
-<spring:url value="/usuario/lista" var="urlUsuario" />
-<spring:url value="/dependencia/lista" var="urlDependencia" />
+<spring:url value="/logeo" var="urlForm" />
 
 <spring:url value="/pdf/lista2" var="urlListarById"></spring:url>
 
@@ -50,7 +46,7 @@
 
 		<hr class="featurette-divider">
 <!-- 			<img src="images/login.png" width="136" height="136" class="center"> -->
-			<form class="form-signin" action="j_security_check" method="post">        
+			<form class="form-signin" action="${urlForm}" method="post">        
 				<h3 class="form-signin-heading">Reporte de lectura</h3>        
 				<label for="j_username" class="sr-only">Usuario</label>
 				<br><input type="text" id="j_username" name="j_username" class="form-control" placeholder="Usuario" required autofocus>

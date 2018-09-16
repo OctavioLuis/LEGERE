@@ -12,6 +12,7 @@
 <title>Inicio</title>
 
 <spring:url value="/resources" var="urlPublic"></spring:url>
+<spring:url value="/alumno/guardarEnviarDespues" var="urlForm"></spring:url>
 <spring:url value="/" var="urlRoot"></spring:url>
 
 
@@ -27,13 +28,47 @@
 	<jsp:include page="../includes/menu.jsp"></jsp:include>
 
 	<div class="container theme-showcase" role="main">
-		<hr class="featurette-divider">
-		<form class="form-signin" action="#" method="post">
+		<c:if test="${msg!=null }">
+			<div class='alert alert-success' role="alert">${ msg }</div>
+		</c:if>
+		<spring:hasBindErrors name="reporte">
+			<div class='alert alert-danger' role='alert'>
+				Por favor corrija los siguientes errores:
+				<ul>
+					<c:forEach var="error" items="${errors.allErrors}">
+						<li><spring:message message="${error}" /></li>
+					</c:forEach>
+				</ul>
+			</div>
+		</spring:hasBindErrors>
+		
+		<form:form action="${urlForm}" method="post"
+			 modelAttribute="reporte">
+			
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label for="genero" class="control-label">Parcial</label> 
+							<select
+								id="nParcial" name="nParcial" class="form-control">
+								<option value="1">primer parcial</option>
+								<option value="2">Segundo parcial</option>
+								<option value="3">Tercer parcial</option>								
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="form-group">
-						<label for="titulo">Título del libro</label> <input type="text"
-							id="titulo" name="titulo" class="form-control" required autofocus>
+						<label for="titulo">Título del libro</label> 
+						<form:hidden path="idReporte" />
+						<form:input type="text" id="titulo" path="titulo" class="form-control" required="required" />
 					</div>
 				</div>
 			</div>
@@ -41,9 +76,9 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="form-group">
-						<label for="bibliografia">Bibliografia del autor</label>
-						<textarea class="form-control" rows="5" name="bibliografia"
-							id="bibliografia" required autofocus></textarea>
+						<label for="biografia">Biografia del autor</label>
+						<form:textarea class="form-control" rows="5" path="biografia"
+							id="biografia" required="required" />
 					</div>
 				</div>
 			</div>
@@ -53,8 +88,8 @@
 				<div class="col-sm-12">
 					<div class="form-group">
 						<label for="resumen">Resumen</label>
-						<textarea class="form-control" rows="5" name="resumen"
-							id="resumen" required autofocus></textarea>
+						<form:textarea class="form-control" rows="10" path="resumen"
+							id="resumen" required="required" />
 					</div>
 				</div>
 			</div>
@@ -63,16 +98,16 @@
 				<div class="col-sm-12">
 					<div class="form-group">
 						<label for="opinion">Opinión Personal</label>
-						<textarea class="form-control" rows="5" name="opinio" id="opinion"
-							required autofocus></textarea>
+						<form:textarea class="form-control" rows="5" path="opinion" id="opinion"
+							required="required" />
 					</div>
 				</div>
 			</div>
 
-			<button type="submit" class="btn btn-success">Guardar y
-				enviar despues</button>			
-		</form>
-		<button type="submit" class="btn btn-danger">Enviar</button>
+			<button type="submit" class="btn btn-success" name="botom" value="1">Guardar y enviar despues</button>
+			<button type="submit" class="btn btn-danger" name="botom" value="2">Enviar</button>			
+		</form:form>
+<!-- 		<button type="submit" class="btn btn-danger">Enviar</button> -->
 		<!-- 	</div> -->
 
 		<!-- FOOTER -->

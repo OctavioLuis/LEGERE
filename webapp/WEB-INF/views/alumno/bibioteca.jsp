@@ -35,7 +35,7 @@
 				<div class="col-sm-3">
 					<form action="${urlRoot}pdf/searchByFolio" method="post">
 						<div class="form-group">
-							<label for="folio">Buscar libreo</label> <input type="text"
+							<label for="folio">Buscar libro</label> <input type="text"
 								class="form-control" name="folio" id="folio" required="required" />
 						</div>
 						<button type="submit" class="btn btn-primary">Buscar</button>

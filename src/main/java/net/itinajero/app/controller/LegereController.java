@@ -23,4 +23,9 @@ public class LegereController {
 		return "LEGERE/reportes";
 	}
 	
+	@RequestMapping(value = "/profesor", method = RequestMethod.GET)
+	public String profesor() {
+		return "LEGERE/profesor";
+	}
+	
 }

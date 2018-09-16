@@ -28,35 +28,34 @@
 
 	<div class="container theme-showcase" role="main">
 		<hr class="featurette-divider">
-
+		<div class="page-header">
+			<h2>Alumnos asignados</h2>
+		</div>
 		<div class="row">
-			<div class="col-sm-12">
-				<div class="form-group">
-					<div class="col-sm-3">
+
+			<div class="form-group">
+				<div class="col-sm-6">
+					<form action="${urlRoot}pdf/searchByFolio" method="post">
 						<div class="form-group">
-							<label for="genero" class="control-label">Semestre</label> <select
-								id="genero" name="genero" class="form-control">
-								<option value="Accion">primer semestre</option>
-								<option value="Aventura">Segundo semestre</option>
-								<option value="Clasicas">Tercer semestre</option>
-								<option value="Comedia Romantica">Cuasto semestre</option>
-							</select>
+							<label for="folio">Buscar alumno</label> <input type="text"
+								class="form-control" name="folio" id="folio" required="required" />
 						</div>
-					</div>
+						<button type="submit" class="btn btn-primary">Buscar</button>
+					</form>
 				</div>
 			</div>
+
 		</div>
+		
 
 		<div class="table-responsive">
 			<table class="table table-hover table-striped table-bordered">
 				<tr>
-					<th>parcial</th>
-					<th>Titulo del libro</th>
-					<th>CALIFICACIÓM</th>
-					<th>OBSERVACIÓN</th>
-
-
-					<th>Opciónes</th>
+					<th>Nombre del alumno</th>
+					<th>Licenciatura</th>
+					<th>semestre</th>
+					<th>Calificación</th>
+					<th>Evaluación</th>
 
 				</tr>
 
@@ -65,7 +64,7 @@
 						<td>${reportes.nParcial}</td>
 						<td>${reportes.titulo}</td>
 						<td>${reportes.calificacion}</td>
-						<td>${reportes.observaciones}</td>
+						<td>${reportes.evaluacion}</td>
 						<td><a
 							href="${pageContext.request.contextPath}/pdf/download/${pdf.idDucumento}">
 								<img src="${urlPublic}/images/save_icon.gif" border="0"
