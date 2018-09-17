@@ -36,5 +36,4 @@ public class UsuarioServiceImpl implements IUsuarioService{
 		usuarioRepo.deleteById(idUsuario);
 		
 	}
-
 }

@@ -55,16 +55,17 @@
 				<tr>
 					<th>Categorías</th>
 					<th>Descripción de las categorías</th>
-					<th>Información enviada por el alumno</th>
-					<th>Observaciones</th>
+					<th>Reporte del alumno</th>
 					<th>Calificación</th>
 
 				</tr>
 
 				<tr>
 						<td>Estructura de los apartados</td>
-						<td>---------</td>
-						<td></td>
+						<td>1. Título del libro, <br>
+						2. Datos biográficos del autor, <br>
+						3. Resumen, <br>
+						4. Opinión</td>
 						<td></td>
 						<td>
 							<div class="form-group">
@@ -81,10 +82,13 @@
 				</tr>
 				
 				<tr>
-						<td>Datos bibiograficos del autor</td>
-						<td>---------</td>
-						<td></td>
-						<td></td>
+						<td>Datos biográficos del autor</td>
+						<td>Se pone el nombre del autor, fecha y lugar<br>
+						de nacimiento,nacionalidad, algunas situaciones <br>
+						relevantes de la vida del autor, premios o reconocimientos<br>
+						al escritor o datos relevantes de la época histórica <br>
+						en que fue escrito. Se escribe en 100 palabras.</td>
+						<td>-----</td>
 						<td>
 							<div class="form-group">
 							<select
@@ -101,8 +105,10 @@
 				
 				<tr>
 						<td>Resumen</td>
-						<td>---------</td>
-						<td></td>
+						<td>Aporta información de los eventos en <br>
+						el tiempo o hechos más relevantes, describe <br>
+						a los personajes y lugares. Además contextualiza. <br>
+						Debe contar con una extensión de 600 palabras.</td>
 						<td></td>
 						<td>
 							<div class="form-group">
@@ -120,8 +126,11 @@
 				
 				<tr>
 						<td>Opinión personal</td>
-						<td>---------</td>
-						<td></td>
+						<td>Da un juicio que valora los acontecimientos <br>
+						de la historia, el uso del lenguaje del mismo. <br>
+						O Comenta la relevancia o impacto en su vida que<br>
+						 le generó la obra literaria. Esta sección debe <br>
+						contar con la extensión de 200 palabras  </td>
 						<td></td>
 						<td>
 							<div class="form-group">
@@ -139,9 +148,16 @@
 				
 				<tr>
 						<td>Cohesión, Coherencia y Ortografía</td>
-						<td>---------</td>
-						<td></td>
-						<td></td>
+						<td>Las ideas particulares están redactadas<br>
+						de manera clara, precisa, lógica, de modo <br>
+						que hay una progresión de las ideas <br>
+						que llegan a presentar una unidad global, <br>
+						con un texto unido. Además aplica el adecuado <br>
+						uso de los signos de puntuación. Evita vicios <br>
+						del lenguaje como repetir palabras, pleonasmos, <br>
+						silepsis, anacolutos, anantapódoton, cacofonías, <br>
+						etc.  Aplicación  de  las normas ortográficas.</td>
+						<td>-----</td>
 						<td>
 							<div class="form-group">
 							<select
@@ -159,6 +175,10 @@
 			</table>
 			
 			<div class="page-header">
+			<label>Observaciones:</label>
+			<textarea class="form-control" rows="0" name="observaciones"
+							id="observaciones" required="required" >
+							</textarea>	
 				<h2>Calificación final: </h2>
 			</div>
 			
